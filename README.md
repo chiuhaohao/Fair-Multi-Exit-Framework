@@ -2,8 +2,8 @@
 
 This is the official repository of the following paper:
 
-**Toward Fairness Through Fair Multi-Exit Framework for Dermatological Disease Diagnosis **<br>
-[Ching-Hao Chiu*], [Hao-Wei Chung*], [Yu-Jen Chen], [Yiyu Shi], [Tsung-Yi Ho]
+**Toward Fairness Through Fair Multi-Exit Framework for Dermatological Disease Diagnosis**<br>
+Ching-Hao Chiu, Hao-Wei Chung, Yu-Jen Chen, Yiyu Shi, Tsung-Yi Ho
 
 [[arxiv](https://arxiv.org/pdf/2306.14518v1.pdf)] 
 
@@ -14,12 +14,7 @@ This is the official repository of the following paper:
 pip install -r requirements.txt
 ```
 
-### Data preparation
-
-
 ## Training
-### Preliminary
 
 
 ## Evaluation
-### Preliminary
