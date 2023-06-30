@@ -107,10 +107,10 @@ class ISIC2019:
         self.num_classes = 8
         self.image_size = input_size
 
-        predefined_root_dir = '/home/jinghao/ISIC_2019_Training_Input' # specify the image dir
-        train_df = pd.read_csv('/home/jinghao/Fairness/Shallow-Deep-Networks/isic2019_split/isic2019_train_pretraining.csv')
-        vali_df = pd.read_csv('/home/jinghao/Fairness/Shallow-Deep-Networks/isic2019_split/isic2019_val_pretraining.csv')
-        test_df = pd.read_csv('/home/jinghao/Fairness/Shallow-Deep-Networks/isic2019_split/isic2019_test_pretraining.csv')
+        predefined_root_dir = './ISIC_2019_Training_Input' # specify the image dir
+        train_df = pd.read_csv('./isic2019_split/isic2019_train_pretraining.csv')
+        vali_df = pd.read_csv('./isic2019_split/isic2019_val_pretraining.csv')
+        test_df = pd.read_csv('./isic2019_split/isic2019_test_pretraining.csv')
         use_cuda = torch.cuda.is_available()
         kwargs = {'num_workers': 16, 'pin_memory': True} if use_cuda else {}
         sampler = get_weighted_sampler(train_df, label_level='low')
@@ -135,10 +135,10 @@ class fitzpatrick17k:
         self.batch_size = batch_size
         self.num_classes = 114
 
-        predefined_root_dir = '/home/jinghao/fitzpatrick17k_dataset_images' # specify the image dir
-        train_df = pd.read_csv('/home/jinghao/Fairness/Shallow-Deep-Networks/fitzpatrick17k/fitzpatrick17k_train.csv')
-        vali_df = pd.read_csv('/home/jinghao/Fairness/Shallow-Deep-Networks/fitzpatrick17k/fitzpatrick17k_vali.csv')
-        test_df = pd.read_csv('/home/jinghao/Fairness/Shallow-Deep-Networks/fitzpatrick17k/fitzpatrick17k_test.csv')
+        predefined_root_dir = './fitzpatrick17k_dataset_images' # specify the image dir
+        train_df = pd.read_csv('./fitzpatrick17k/fitzpatrick17k_train.csv')
+        vali_df = pd.read_csv('./fitzpatrick17k/fitzpatrick17k_vali.csv')
+        test_df = pd.read_csv('./fitzpatrick17k/fitzpatrick17k_test.csv')
         use_cuda = torch.cuda.is_available()
         kwargs = {'num_workers': 16, 'pin_memory': True} if use_cuda else {}
         sampler = get_weighted_sampler(train_df, label_level='low')
